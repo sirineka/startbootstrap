@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700;1,900&display=swap');
+
+@font-face {
+font-family: 'Foobar';
+font-style: normal;
+font-weight: normal;
+src: local('Foobar'), url('../fonts/Foobar\ Pro-Regular.woff') format('woff');
+font-display: swap;
+}
+
+:root {
+    --primary: #e9a105;
+    --secondary: #f7bc3c;
+    --gradient: linear-gradient(45deg, #2937f0, #9f1ae2);
+    --border-radius: 8px;
+    --white: #fefefe;
+    --text-color: #2b2b2b;
+}
+
+/***************************** STRUCTURE ***************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    color: var(--text-color);
+}
+
+h1,
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    line-height: 120%;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+img, 
+figure, 
+video {
+    max-width: 100%;
+    display: inline-block;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+/*****************navbar***********************/
+.navbar{
+    background-color: #2b2b2b;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0;
+}
+.navbar-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+}
+.logo{
+    font-family: Dancing Script, cursive;
+    color: var(--primary);
+    font-size: 2em;
+    font-weight: bold;
+}
+/*************************banner*********************/
+.banner{
+    background-image: url(../image/header-bg.jpg);
+    color: var(--white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 10em 0;
+    background-position: center;
+}
+.banner em{
+    font-size: 2em;
+}
+.banner h1{
+    font-size: 3em;
+    margin-bottom: 1.5em ;
+    margin-top: .7em;
+}
+.banner .btn{
+    background-color: var(--secondary);
+    padding: 1.5em;
+    border-radius: 5%;
+}
+/************************about******************/
+.about{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+.about1 { grid-area: 1 / 1 / 2 / 2; }
+.about2 { grid-area: 1 / 2 / 2 / 3; }
+.about3 { grid-area: 2 / 2 / 3 / 3; }
+.about4 { grid-area: 2 / 3 / 3 / 4; }
+.about5 { grid-area: 3 / 2 / 4 / 3; }
+.about6 { grid-area: 3 / 1 / 4 / 2; }
+.about7 { grid-area: 4 / 2 / 5 / 3; }
+.about8 { grid-area: 4 / 3 / 5 / 4; }
+.about9 { grid-area: 5 / 2 / 6 / 3; } 
