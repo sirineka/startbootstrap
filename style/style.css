@@ -12,7 +12,7 @@ font-display: swap;
 :root {
     --primary: #e9a105;
     --secondary: #f7bc3c;
-    --gradient: linear-gradient(45deg, #2937f0, #9f1ae2);
+    --third: rgb(240, 239, 239);
     --border-radius: 8px;
     --white: #fefefe;
     --text-color: #2b2b2b;
@@ -91,11 +91,17 @@ ol {
     align-items: center;
     padding: 2em 0;
 }
-.navbar-links{
+.navbar-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1em;
+    transition: all .4s ease-in-out;
+}
+.navbar-link:hover{
+    color: var(--primary);
+    cursor: pointer;
+
 }
 .logo{
     font-family: Dancing Script, cursive;
@@ -125,14 +131,19 @@ ol {
     background-color: var(--secondary);
     padding: 1.5em;
     border-radius: 5%;
+    transition: all .4s ease-in-out;
+}
+.btn:hover {
+    background-color:#966702;
+    cursor: pointer;
 }
 /************************about******************/
-.about{
+.about-columns{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+grid-column-gap: 2em;
+grid-row-gap: 8em;
 }
 .about1 { grid-area: 1 / 1 / 2 / 2; }
 .about2 { grid-area: 1 / 2 / 2 / 3; }
@@ -143,3 +154,11 @@ grid-row-gap: 0px;
 .about7 { grid-area: 4 / 2 / 5 / 3; }
 .about8 { grid-area: 4 / 3 / 5 / 4; }
 .about9 { grid-area: 5 / 2 / 6 / 3; } 
+
+.about-columns img{
+  
+}.about2 img{
+    border-radius: 50%;
+    position: relative;
+    border: var(--third) solid .5em;
+}
