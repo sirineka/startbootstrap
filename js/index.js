@@ -1,16 +1,14 @@
-var sidenav = document.getElementById("mySidenav");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
+// on récupère l'élèment HTML balise a pour pouvoir ajouter la class open au click
 
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
+let burgerBtn = document.querySelector('.link-burger');
 
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  sidenav.classList.add("active");
-}
+//on récupère l'élèment Html balise ul avec le menu pour ajouter la classe open au click sur l'élèment burgerBtn
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  sidenav.classList.remove("active");
-}
+let navbarLinks = document.querySelector('.navbar-links ul');
+
+if (burgerBtn && navbarLinks) {
+    burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.toggle('open');
+        navbarLinks.classList.toggle('open');
+    })
+  }
